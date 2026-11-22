@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DayZ Guide переехал</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://strom-dayz.github.io/">
+<meta property="og:title" content="DayZ Guide by STROM">
+<meta property="og:description" content="Гайд по DayZ для новичка: strom-dayz.github.io">
+<meta property="og:url" content="https://strom-dayz.github.io/">
+<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#121417;color:#eef1f5;font:17px/1.5 -apple-system,"Segoe UI",Roboto,sans-serif;text-align:center}main{padding:24px}a{display:inline-block;margin-top:16px;padding:14px 22px;background:#1f6feb;color:#fff;border-radius:4px;text-decoration:none;font-weight:600}</style>
+</head>
+<body>
+<main>
+<p>DayZ Guide переехал на новый адрес:<br><b>strom-dayz.github.io</b></p>
+<a id="go" href="https://strom-dayz.github.io/">Открыть гайд</a>
+</main>
+<script>
+(function () {
+  var NEW = 'https://strom-dayz.github.io/';
+  var url = NEW + (location.hash || '');
+  try {
+    var d = {}, n = 0;
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (!/^dz_(favs|quiz_best|my_route|me|check_[\w-]+)$/.test(k)) continue;
+      try { d[k] = JSON.parse(localStorage.getItem(k)); n++; } catch (e) {}
+    }
+    if (n) {
+      var bytes = new TextEncoder().encode(JSON.stringify(d)), s = '';
+      bytes.forEach(function (b) { s += String.fromCharCode(b); });
+      url = NEW + '#import=' + btoa(s).replace(/\+/g, '-').replace(/\//g, '_') + '&to=' + encodeURIComponent(location.hash || '#');
+    }
+  } catch (e) {}
+  document.getElementById('go').href = url;
+  location.replace(url);
+})();
+</script>
+</body>
+</html>

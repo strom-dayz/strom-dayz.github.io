@@ -6,8 +6,8 @@
 //               обычные переменные стираются, когда сохраняешь код в редакторе Cloudflare
 // Токен не хранится ни на сайте, ни в репозитории.
 
-const ALLOWED = ['https://bosscc12361-collab.github.io', 'http://localhost:8765'];
-const SITE = 'https://bosscc12361-collab.github.io/dayz-guide/';
+const ALLOWED = ['https://strom-dayz.github.io', 'https://bosscc12361-collab.github.io', 'http://localhost:8765'];
+const SITE = 'https://strom-dayz.github.io/';
 const LIMIT = 6;            // сообщений с одного IP
 const WINDOW = 60 * 60e3;   // за час
 const hits = new Map();     // простой лимит в памяти воркера

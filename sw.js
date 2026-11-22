@@ -3,11 +3,11 @@
    чтобы телефоны подхватили обновление.
    Страница (index.html) берётся из сети, если она есть (до 3 секунд), иначе из кэша — так онлайн всегда свежая версия.
    Данные из /data: сначала сохранённая копия, свежая скачивается в фоне. */
-const VERSION = 'v36';
+const VERSION = 'v37';
 const V = VERSION.slice(1);
 const CACHE = 'dayz-guide-' + VERSION;
 const SHELL = [
-  './', 'index.html', 'css/style.css?v=' + V, 'js/app.js?v=' + V, 'js/icons.js?v=' + V, 'js/map.js?v=' + V, 'js/nav.js?v=' + V, 'manifest.json',
+  './', 'index.html', 'css/style.css?v=' + V, 'js/app.js?v=' + V, 'js/icons.js?v=' + V, 'js/migrate.js?v=' + V, 'js/map.js?v=' + V, 'js/nav.js?v=' + V, 'manifest.json',
   'data/map.json?v=' + V, 'data/map-vec.json?v=' + V, 'data/map-poi.json?v=' + V, 'data/map-grid.json?v=' + V, 'img/map/chernarus.jpg?v=27', 'data/symptoms.json?v=' + V, 'data/patches.json?v=' + V, 'data/quiz.json?v=' + V, 'data/servers.json?v=' + V, 'data/srv.json?v=' + V,
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'fonts/russo-cyr.woff2', 'fonts/russo-lat.woff2', 'fonts/onest-cyr.woff2', 'fonts/onest-lat.woff2',
   'data/meta.json?v=' + V, 'data/first15.json?v=' + V, 'data/food.json?v=' + V, 'data/diseases.json?v=' + V,
